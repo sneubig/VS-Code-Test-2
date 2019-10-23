@@ -1,0 +1,69 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+    
+    <aura:attribute name="recordId" type="Id" description="Id of record on which this component is hosted." />
+    <aura:attribute name="sObjectName" type="String" description="API name of record on which this component is hosted." />
+    
+    <aura:attribute name="Legend" type="String" description="Legend to display" />
+    
+    <aura:attribute name="perText" type="String" default="0%" description="Text to display inside circle. It is auto calculated field and used internally." />
+    <aura:attribute name="cirDeg" type="String" default="0" description="Degree of Progress to show. It is auto calculated field and used internally." />
+    
+    <aura:attribute name="totalProgress" type="String" default="100" description="Total progress. It can be number OR API name of field." />
+    <aura:attribute name="actualProgress" type="String" default="50" description="Actual progress. It can be number OR API name of field." />
+    
+    <aura:attribute name="theme" type="String" default="green" description="Theme of Circular Progress Bar. Possible values are blue, green, orange." />
+    <aura:attribute name="size" type="String" default="small" description="Size of Circular Progress Bar. Possible values are small, medium, big." />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+<div class="clearFloats slds-align-absolute-center">
+
+<div class="{! ( v.cirDeg >
+ 179 ) ? 'container p50plus '+v.theme+' '+v.size : 'container '+v.theme +' '+v.size }">
+            <span>{!v.perText}</span> 
+
+<div class="slice">
+
+<div class="bar" style="{! '-webkit-transform: rotate('+v.cirDeg+'deg); -moz-transform: rotate('+v.cirDeg+'deg); -ms-transform: rotate('+v.cirDeg+'deg); -o-transform: rotate('+v.cirDeg+'deg); transform: rotate('+v.cirDeg+'deg); -ms-transform: rotate('+v.cirDeg+'deg);'}"></div>
+
+
+    
+<div class="fill"></div>
+            </div>
+        </div>
+         
+    </div>
+
+    <div class="pie">
+    <lightning:progressIndicator class="border-radius-circle" currentStep="step-3" type="path" variant="base">
+        <aura:iteration items="{! v.steps }" var="step">
+            <lightning:progressStep label="{! step.label }" value="{! step.value }"/>
+        </aura:iteration>
+    </lightning:progressIndicator>
+    </div>
+<!--
+<div class="clearFloats slds-align-absolute-center legend"> 
+        {!v.Legend}
+    </div>
+-->
+
+
+    <!--
+    attributes 
+    <aura:attribute name="steps" type="List"/>
+      
+        <aura:attribute name="percentDone" type="Integer" default="10" />
+        
+        <div data-reactroot="" class="slds-progress-bar slds-progress-bar_medium slds-progress-bar_circular" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{!v.percentDone}" role="progressbar">
+            <span class="slds-progress-bar__value" style="{!'width:'+v.percentDone+'%'}">
+                <span class="slds-assistive-text">Progress: {!v.percentDone}%</span>
+            </span>
+        </div>
+        
+    <lightning:progressIndicator class="border-radius-circle" currentStep="step-3" type="path" variant="base">
+        <aura:iteration items="{! v.steps }" var="step">
+            <lightning:progressStep label="{! step.label }" value="{! step.value }"/>
+        </aura:iteration>
+    </lightning:progressIndicator>
+    -->
+</aura:component>
