@@ -9,8 +9,8 @@
             "c/nouislider": [
                 "../staticresources/nouislider/nouislider.js"
             ],
-            "c/helloWorld": [
-                "helloWorld/helloWorld.js"
+            "c/helloWorld1": [
+                "helloWorld1/helloWorld1.js"
             ]
         }
     },
