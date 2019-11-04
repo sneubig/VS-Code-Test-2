@@ -3,20 +3,20 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/eBike": [
+                "eBike/eBike.js"
+            ],
             "c/helloWorld1": [
                 "helloWorld1/helloWorld1.js"
+            ],
+            "c/helloWorldBasic": [
+                "helloWorldBasic/helloWorldBasic.js"
             ],
             "c/leaflet": [
                 "../staticresources/leaflet/leaflet.js"
             ],
             "c/nouislider": [
                 "../staticresources/nouislider/nouislider.js"
-            ],
-            "c/HelloWorldBasic": [
-                "HelloWorldBasic/HelloWorldBasic.js"
-            ],
-            "c/helloWorldBasic": [
-                "helloWorldBasic/helloWorldBasic.js"
             ]
         }
     },
