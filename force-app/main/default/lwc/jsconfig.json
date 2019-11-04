@@ -3,14 +3,20 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/helloWorld1": [
+                "helloWorld1/helloWorld1.js"
+            ],
             "c/leaflet": [
                 "../staticresources/leaflet/leaflet.js"
             ],
             "c/nouislider": [
                 "../staticresources/nouislider/nouislider.js"
             ],
-            "c/helloWorld1": [
-                "helloWorld1/helloWorld1.js"
+            "c/HelloWorldBasic": [
+                "HelloWorldBasic/HelloWorldBasic.js"
+            ],
+            "c/helloWorldBasic": [
+                "helloWorldBasic/helloWorldBasic.js"
             ]
         }
     },
