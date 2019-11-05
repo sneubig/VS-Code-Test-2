@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "VS-Code-Test-2",
+			"path": "."
+		}
+	],
+	"settings": {
+		"eslint.nodePath": "/Users/janeneubig/.vscode/extensions/salesforce.salesforcedx-vscode-lwc-47.4.0/node_modules"
+	}
+}
