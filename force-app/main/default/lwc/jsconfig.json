@@ -17,6 +17,9 @@
             ],
             "c/nouislider": [
                 "../staticresources/nouislider/nouislider.js"
+            ],
+            "c/contactForm": [
+                "contactForm/contactForm.js"
             ]
         }
     },
